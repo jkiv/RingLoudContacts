@@ -23,6 +23,7 @@ public class OnPhoneCallReceiver extends BroadcastReceiver
 	{
 		TelephonyManager telephony = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
 		telephony.listen(new VolumeChangingPhoneListener(context), PhoneStateListener.LISTEN_CALL_STATE);
+		// FIXME Is the listener ever unregistered?  Will multiple calls register multiple listeners?
 	}
 	
 	private class VolumeChangingPhoneListener extends PhoneStateListener
