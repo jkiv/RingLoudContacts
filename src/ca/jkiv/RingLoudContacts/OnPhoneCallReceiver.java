@@ -21,6 +21,9 @@ public class OnPhoneCallReceiver extends BroadcastReceiver
 	@Override
 	public void onReceive(Context context, Intent intent)
 	{
+                // One might be able to check the status here, rather than registering a listener...
+                // http://developer.android.com/reference/android/telephony/TelephonyManager.html#getCallState%28%29
+                // http://developer.android.com/reference/android/telephony/TelephonyManager.html#ACTION_PHONE_STATE_CHANGED
 		TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
 		telephonyManager.listen(new VolumeChangingPhoneListener(context), PhoneStateListener.LISTEN_CALL_STATE);
 	}
