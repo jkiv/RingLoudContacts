@@ -94,7 +94,7 @@ public class ContactListActivity extends ListActivity
         super.onCreateContextMenu(menu, view, menuInfo);
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.contactlist_context_menu, menu);
-        menu.setHeaderTitle("Context menu title");
+        menu.setHeaderTitle(R.string.ContactListContextMenu_TitleText);
     }
     
     @Override
