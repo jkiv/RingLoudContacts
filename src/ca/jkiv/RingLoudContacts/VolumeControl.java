@@ -18,11 +18,18 @@ public class VolumeControl
 	private static final String VOLUME_MODE_PREF = "VolumeMode";
 	private static final String VOLUME_LEVEL_PREF = "VolumeLevel";
 	
-	private static final int VOLUME_MODE_PREF_DEF = AudioManager.RINGER_MODE_NORMAL;
+	// Default remembered state is silent (this is the assumed operation)
+	private static final int VOLUME_MODE_PREF_DEF = AudioManager.RINGER_MODE_SILENT;
 	private static final int VOLUME_LEVEL_PREF_DEF = 0;
 	
 	private static final int stream = AudioManager.STREAM_RING;
 	
+	private VolumeControl() {} // Class not meant to be instantiated
+	
+	/**
+	 * Restore volume and ringer mode to saved value.
+	 * @param context
+	 */
 	public static void resumeVolume(Context context)
 	{
 		AudioManager audioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
@@ -36,6 +43,10 @@ public class VolumeControl
 		audioManager.setStreamVolume(stream, volumeLevel, flags);
 	}
 
+	/**
+	 * Remember current volume level and ringer mode.
+	 * @param context
+	 */
 	public static void saveVolume(Context context)
 	{
 		AudioManager audioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
@@ -47,9 +58,13 @@ public class VolumeControl
 		Editor editor = sharedPreferences.edit();
 		editor.putInt(VOLUME_MODE_PREF, ringerMode);
 		editor.putInt(VOLUME_LEVEL_PREF, volumeLevel);
-		editor.commit();
+		editor.commit();		
 	}
 
+	/**
+	 * Turn on the volume and maximize it.
+	 * @param context
+	 */
 	public static void maxVolume(Context context)
 	{
 		AudioManager audioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
@@ -57,7 +72,8 @@ public class VolumeControl
 		int stream = AudioManager.STREAM_RING;
 		int maxVolume = audioManager.getStreamMaxVolume(stream);
 		int flags = 0;
-		
+
 		audioManager.setStreamVolume(stream, maxVolume, flags);
+		audioManager.setRingerMode(AudioManager.RINGER_MODE_NORMAL);		
 	}
 }

@@ -13,11 +13,15 @@
 	<string name="ContactListMenu_AddCondensedText">Add Number</string>
 	<string name="ContactListMenu_ClearText">Clear list</string>
 	<string name="ContactListMenu_ClearCondensedText">Clear</string>
+	<string name="ContactListMenu_SettingsText">Settings</string>
+	<string name="ContactListMenu_SettingsCondensedText">Settings</string>
+	
 	<string name="ContactListContextMenu_TitleText">Phone number</string>
 	<string name="ContactListContextMenu_EditText">Edit number</string>
 	<string name="ContactListContextMenu_EditCondensedText">Edit</string>
 	<string name="ContactListContextMenu_DeleteText">Remove number</string>
 	<string name="ContactListContextMenu_DeleteCondensedText">Remove</string>
+	
 	<string name="ContactList_EmptyToastText">No numbers in your list.</string>
 	<string name="ContactList_RemovedNumberToastText">Removed number.</string>
 	<string name="ContactList_AddNumberTitleText">Add number</string>
@@ -26,8 +30,20 @@
 	<string name="ContactList_NumberExistsToastText">Number already exists in list.</string>
 	<string name="ContactList_AreYouSureText">Are you sure you want to clear your list?</string>
 	<string name="ContactList_AreYouSureTitleText">Are you sure?</string>
+	
 	<string name="Dialog_OKText">OK</string>
 	<string name="Dialog_CancelText">Cancel</string>
 	<string name="Dialog_YesText">Yes</string>
 	<string name="Dialog_NoText">No</string>
+	
+	<string name="Settings_Title">Ring Loud Contacts > Settings</string>
+	<string name="Settings_TypesCategoryTitle">Options</string>
+	<string name="Settings_AdjustRingerVolumeTitle">Adjust ringer volume</string>
+	<string name="Settings_AdjustRingerVolumeSummary">Adjust the volume when the phone is ringing.</string>
+	<string name="Settings_AboutCategoryTitle"></string>
+	<string name="Settings_AboutTitle">About</string>
+	<string name="Settings_AboutSummary"></string>
+	
+	<string name="About_Title">About</string>
+	<string name="About_Message">RingLoudContacts\n\nNOTE: This app may require caller-ID.\n\nThis is an Android app that maximizes your ring volume when certain contacts are calling.  These contacts are specified by the user.  They can add contacts or specify a number manually.\n\nAuthor: Jon Kivinen (android@jkiv.ca)\n\nhttp://jkiv.ca/android/\n\n</string>
 </resources>

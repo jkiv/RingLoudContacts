@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    User defined behaviour for  
+
+    Package: ca.jkiv.RingLoudContacts
+    Author: Jon Kivinen <android@jkiv.ca>
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="@string/Settings_TypesCategoryTitle">
+		<CheckBoxPreference android:title="@string/Settings_AdjustRingerVolumeTitle"
+                    	 android:summary="@string/Settings_AdjustRingerVolumeSummary"
+                    	 android:key="AdjustRingerVolume"
+                    	 android:defaultValue="true"
+                    	 android:enabled="true"
+                    	 android:visible="true" />
+	</PreferenceCategory>
+	
+	<PreferenceCategory android:title="@string/Settings_AboutCategoryTitle">
+		<Preference android:title="@string/Settings_AboutTitle"
+                    android:summary="@string/Settings_AboutSummary"
+                    android:key="_AboutLink" />
+	</PreferenceCategory>
+</PreferenceScreen>

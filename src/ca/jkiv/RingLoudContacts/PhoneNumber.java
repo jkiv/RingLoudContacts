@@ -26,9 +26,7 @@ public class PhoneNumber implements CharSequence
 	
 	public void setString(String s)
 	{
-		value = "";
-		if (s != null)
-			value = s;
+		value = (s == null) ? "" : s; // Disallow this.value to be null
 	}
 	
 	public boolean equals(Object o)

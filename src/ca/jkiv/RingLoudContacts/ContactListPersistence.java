@@ -22,6 +22,13 @@ public class ContactListPersistence
 	private static final String LIST_SEPARATOR = "|";
 	private static final String LIST_SEPARATOR_EXPR = "\\|";
 	
+	private ContactListPersistence() {} // Class not meant to be instantiated
+
+	/**
+	 * Save list of phone numbers as contact list.
+	 * @param context
+	 * @param contacts
+	 */
 	public static void setContactList(Context context, List<PhoneNumber> contacts)
 	{
 		StringBuilder concatlist = new StringBuilder();

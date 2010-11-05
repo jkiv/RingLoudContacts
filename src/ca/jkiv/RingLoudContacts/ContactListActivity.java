@@ -146,7 +146,14 @@ public class ContactListActivity extends ListActivity
           case R.id.ContactListMenu_AddContact:
         	addNumberByContactPicker();
         	return true;
-          
+
+          // Jump to settings activity
+          case R.id.ContactListMenu_Settings:
+        	  // Go to settings activity
+          	  Intent intent = new Intent(this, SettingsActivity.class);
+          	  startActivity(intent);
+          	  return true;
+        	
           // Clear the list
           case R.id.ContactListMenu_Clear:
         	  clearList();
@@ -383,7 +390,6 @@ public class ContactListActivity extends ListActivity
 	
 	private void changeNumberAtIndex(long id, String text)
 	{
-		PhoneNumber previousPhoneNumber = listData.get((int) id);
 		PhoneNumber newPhoneNumber = new PhoneNumber(text);
 		
         // Replace item at `id` with `text`

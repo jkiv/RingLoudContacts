@@ -13,18 +13,29 @@
 	          android:icon="@android:drawable/ic_menu_add"
 	          android:visible="true"
 	          android:enabled="true" />
-	          
+	
         <item android:id="@+id/ContactListMenu_Add"
               android:title="@string/ContactListMenu_AddText"
               android:titleCondensed="@string/ContactListMenu_AddCondensedText"
-              android:icon="@android:drawable/ic_menu_more"
+              android:icon="@android:drawable/ic_menu_edit"
               android:visible="true"
               android:enabled="true" />
-              
+	</group>
+	
+	<group>
         <item android:id="@+id/ContactListMenu_Clear"
               android:title="@string/ContactListMenu_ClearText"
               android:titleCondensed="@string/ContactListMenu_ClearCondensedText"
               android:icon="@android:drawable/ic_menu_close_clear_cancel"
+              android:visible="true"
+              android:enabled="true" />
+	</group>
+	
+	<group>
+		<item android:id="@+id/ContactListMenu_Settings"
+              android:title="@string/ContactListMenu_SettingsText"
+              android:titleCondensed="@string/ContactListMenu_SettingsCondensedText"
+              android:icon="@android:drawable/ic_menu_preferences"
               android:visible="true"
               android:enabled="true" />
     </group>
