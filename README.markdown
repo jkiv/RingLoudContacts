@@ -1,8 +1,8 @@
-# ca.jkiv.RingLoudContacts
+## ca.jkiv.RingLoudContacts
 
-This is an Android app that maximizes your ring volume for certain contacts which the user specifies.
+This is an Android app that maximizes your ring volume when certain contacts are calling.  These contacts are specified by the user.  They can add contacts or specify a number manually.
 
-This app may require caller-ID.
+#### This app may require caller-ID.
 
 Author: Jon Kivinen <android@jkiv.ca>
 
