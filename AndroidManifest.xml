@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	Manifest for ca.jkiv.RingLoudContacts
+	
+	Package: ca.jkiv.RingLoudContacts
+    Author: Jon Kivinen <android@jkiv.ca>
+ -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="ca.jkiv.RingLoudContacts"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <application android:icon="@drawable/icon"
+    			 android:label="@string/app_name"
+    			 android:debuggable="true">
+
+		<activity android:name=".ContactListActivity"
+				  android:label="@string/app_name"
+				  android:enabled="true">
+		  	<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+
+	    <receiver android:name=".OnPhoneCallReceiver"
+	    		  android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+    
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    
+    <uses-sdk android:minSdkVersion="7" />
+
+</manifest> 

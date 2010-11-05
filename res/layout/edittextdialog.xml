@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout elements for EditTextDialog. 
+
+    Package: ca.jkiv.RingLoudContacts
+    Author: Jon Kivinen <android@jkiv.ca>
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/EditTextDialog_EditTextFrame"
+             android:layout_width="fill_parent"
+             android:padding="8dip"
+             android:layout_height="wrap_content">
+	     
+	<EditText android:id="@+id/EditTextDialog_EditText"
+	          android:layout_width="fill_parent"
+	          android:layout_height="wrap_content"
+	          android:scrollHorizontally="true"
+	          android:gravity="fill_horizontal"
+	          android:layout_span="2"/>
+</FrameLayout>

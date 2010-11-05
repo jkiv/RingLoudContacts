@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Menu for ContactListActivity
+    
+    Package: ca.jkiv.RingLoudContacts
+    Author: Jon Kivinen <android@jkiv.ca>
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+	    <item android:id="@+id/ContactListMenu_AddContact"
+	          android:title="@string/ContactListMenu_AddContactText"
+	          android:titleCondensed="@string/ContactListMenu_AddContactCondensedText"
+	          android:icon="@android:drawable/ic_menu_add"
+	          android:visible="true"
+	          android:enabled="true" />
+	          
+        <item android:id="@+id/ContactListMenu_Add"
+              android:title="@string/ContactListMenu_AddText"
+              android:titleCondensed="@string/ContactListMenu_AddCondensedText"
+              android:icon="@android:drawable/ic_menu_more"
+              android:visible="true"
+              android:enabled="true" />
+              
+        <item android:id="@+id/ContactListMenu_Clear"
+              android:title="@string/ContactListMenu_ClearText"
+              android:titleCondensed="@string/ContactListMenu_ClearCondensedText"
+              android:icon="@android:drawable/ic_menu_close_clear_cancel"
+              android:visible="true"
+              android:enabled="true" />
+    </group>
+</menu>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	String constants (english) for ca.jkiv.RingLoudContacts
+	
+    Package: ca.jkiv.RingLoudContacts
+    Author: Jon Kivinen <android@jkiv.ca>
+-->
+<resources>
+    <string name="app_name">Ring Loud Contacts</string>
+	<string name="ContactListMenu_AddContactText">Add Contact</string>
+	<string name="ContactListMenu_AddContactCondensedText">Add Contact</string>
+	<string name="ContactListMenu_AddText">Add Number</string>
+	<string name="ContactListMenu_AddCondensedText">Add Number</string>
+	<string name="ContactListMenu_ClearText">Clear list</string>
+	<string name="ContactListMenu_ClearCondensedText">Clear</string>
+	<string name="ContactListContextMenu_EditText">Edit number</string>
+	<string name="ContactListContextMenu_EditCondensedText">Edit</string>
+	<string name="ContactListContextMenu_DeleteText">Remove number</string>
+	<string name="ContactListContextMenu_DeleteCondensedText">Remove</string>
+	<string name="ContactList_EmptyToastText">No numbers in your list.</string>
+	<string name="ContactList_RemovedNumberToastText">Removed number.</string>
+	<string name="ContactList_AddNumberTitleText">Add number</string>
+	<string name="ContactList_EditNumberTitleText">Edit number</string>
+	<string name="ContactList_WhichNumberTitleText">Which number?</string>
+	<string name="ContactList_NumberExistsToastText">Number already exists in list.</string>
+	<string name="ContactList_AreYouSureText">Are you sure you want to clear your list?</string>
+	<string name="ContactList_AreYouSureTitleText">Are you sure?</string>
+	<string name="Dialog_OKText">OK</string>
+	<string name="Dialog_CancelText">Cancel</string>
+	<string name="Dialog_YesText">Yes</string>
+	<string name="Dialog_NoText">No</string>
+</resources>
