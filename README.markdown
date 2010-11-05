@@ -6,4 +6,4 @@ This app may require caller-ID.
 
 Author: Jon Kivinen <android@jkiv.ca>
 
-License: (Creative Commons Attribution Share Alike)[http://creativecommons.org/about/licenses]
+License: <a href="http://creativecommons.org/about/licenses" title="Creative Commons Attribution Share Alike">Creative Commons Attribution Share Alike</a>
