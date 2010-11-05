@@ -21,9 +21,8 @@ public class OnPhoneCallReceiver extends BroadcastReceiver
 	@Override
 	public void onReceive(Context context, Intent intent)
 	{
-		TelephonyManager telephony = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-		telephony.listen(new VolumeChangingPhoneListener(context), PhoneStateListener.LISTEN_CALL_STATE);
-		// FIXME Is the listener ever unregistered?  Will multiple calls register multiple listeners?
+		TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+		telephonyManager.listen(new VolumeChangingPhoneListener(context), PhoneStateListener.LISTEN_CALL_STATE);
 	}
 	
 	private class VolumeChangingPhoneListener extends PhoneStateListener
@@ -42,6 +41,8 @@ public class OnPhoneCallReceiver extends BroadcastReceiver
 			  case TelephonyManager.CALL_STATE_IDLE:
 				// Phone stopped ringing
 				VolumeControl.resumeVolume(context);
+				TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+				telephonyManager.listen(this, PhoneStateListener.LISTEN_NONE);
 				break;
 			  case TelephonyManager.CALL_STATE_RINGING:
 				// Phone is ringing
