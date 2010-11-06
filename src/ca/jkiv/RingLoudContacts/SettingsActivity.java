@@ -7,6 +7,11 @@ import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 
+/**
+ * The activity for changing the settings.
+ * 
+ * @author Jon Kivinen <android@jkiv.ca>
+ */
 public class SettingsActivity extends PreferenceActivity
 {
     private PreferenceManager preferenceManager;
@@ -36,7 +41,7 @@ public class SettingsActivity extends PreferenceActivity
             	new AlertDialog.Builder(SettingsActivity.this)
                 .setTitle(R.string.About_Title)
                 .setMessage(R.string.About_Message)
-                //.setIcon(R.drawable.ic_launcher_ring_loud_contacts) // Icon not made yet.
+                .setIcon(R.drawable.ic_launcher_ring_loud_contacts)
                 .show();
                 
                 return true;

@@ -11,7 +11,7 @@
 	<string name="ContactListMenu_AddContactCondensedText">Add Contact</string>
 	<string name="ContactListMenu_AddText">Add Number</string>
 	<string name="ContactListMenu_AddCondensedText">Add Number</string>
-	<string name="ContactListMenu_ClearText">Clear list</string>
+	<string name="ContactListMenu_ClearText">Clear All</string>
 	<string name="ContactListMenu_ClearCondensedText">Clear</string>
 	<string name="ContactListMenu_SettingsText">Settings</string>
 	<string name="ContactListMenu_SettingsCondensedText">Settings</string>
@@ -24,8 +24,8 @@
 	
 	<string name="ContactList_EmptyToastText">No numbers in your list.</string>
 	<string name="ContactList_RemovedNumberToastText">Removed number.</string>
-	<string name="ContactList_AddNumberTitleText">Add number</string>
-	<string name="ContactList_EditNumberTitleText">Edit number</string>
+	<string name="ContactList_AddNumberTitleText">Add phone number</string>
+	<string name="ContactList_EditNumberTitleText">Edit phone number</string>
 	<string name="ContactList_WhichNumberTitleText">Which number?</string>
 	<string name="ContactList_NumberExistsToastText">Number already exists in list.</string>
 	<string name="ContactList_AreYouSureText">Are you sure you want to clear your list?</string>
@@ -45,5 +45,5 @@
 	<string name="Settings_AboutSummary"></string>
 	
 	<string name="About_Title">About</string>
-	<string name="About_Message">RingLoudContacts\n\nNOTE: This app may require caller-ID.\n\nThis is an Android app that maximizes your ring volume when certain contacts are calling.  These contacts are specified by the user.  They can add contacts or specify a number manually.\n\nAuthor: Jon Kivinen (android@jkiv.ca)\n\nhttp://jkiv.ca/android/\n\n</string>
+	<string name="About_Message">Ring Loud Contacts\n\nNOTE: This app may require caller-ID.\n\nThis is an Android app that maximizes your ring volume when certain numbers are calling.  These numbers are specified by the user.  The user can add one of their contacts or specify a number manually.\n\nhttp://jkiv.ca/android/\n\nSource available: http://github.com/jkiv/RingLoudContacts/\n\n</string>
 </resources>
