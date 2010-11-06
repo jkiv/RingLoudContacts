@@ -10,8 +10,15 @@ import android.telephony.TelephonyManager;
 /**
  * OnPhoneStateChangeReceiver
  * 
- * onReceive() should be called when the phone is receiving calls
- * 
+ * I've seen some examples that register a PhoneStateListener when onReceive()
+ * is invoked.  I'm under the impression onReceive() is called when the phone's
+ * state changes and the information you'd get with a PhoneStateListener is
+ * either available through TelephonyManager or encoded in the intent.  So
+ * instead of using a PhoneStateListener, I just determine the phone state
+ * and take action from within onReceive().
+ *
+ *                                                     -- Jon Kivinen
+ *
  * @author Jon Kivinen <android@jkiv.ca>
  * 
  * @see BroadcastReceiver#onReceive(Context, Intent)
