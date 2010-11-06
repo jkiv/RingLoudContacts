@@ -4,8 +4,6 @@ import android.view.View;
 import android.widget.EditText;
 
 /**
- * EditTextDialogWrapper
- * 
  * Holds {@link EditText} and parent {@link View} for retrieving the value of a dialog with an EditText. 
  * 
  * @author Jon Kivinen <android@jkiv.ca>

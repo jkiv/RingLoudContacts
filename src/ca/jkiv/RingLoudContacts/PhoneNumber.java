@@ -3,8 +3,6 @@ package ca.jkiv.RingLoudContacts;
 import android.telephony.PhoneNumberUtils;
 
 /**
- * PhoneNumber
- * 
  * A string wrapper which uses PhoneNumberUtils to compare.
  * 
  * @author Jon Kivinen <android@jkiv.ca>

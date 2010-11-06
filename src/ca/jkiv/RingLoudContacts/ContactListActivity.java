@@ -30,8 +30,6 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 /**
- * ContactListActivity
- * 
  * The activity for editing your contact list.
  * 
  * @author Jon Kivinen <android@jkiv.ca>

@@ -8,8 +8,8 @@ import android.content.Intent;
 import android.telephony.TelephonyManager;
 
 /**
- * OnPhoneStateChangeReceiver
- * 
+ * BroadcastReceiver responsible for listening to the phone's state.<br/><br/> 
+ * <pre>
  * I've seen some examples that register a PhoneStateListener when onReceive()
  * is invoked.  I'm under the impression onReceive() is called when the phone's
  * state changes and the information you'd get with a PhoneStateListener is
@@ -18,9 +18,8 @@ import android.telephony.TelephonyManager;
  * and take action from within onReceive().
  *
  *                                                     -- Jon Kivinen
- *
+ * </pre>
  * @author Jon Kivinen <android@jkiv.ca>
- * 
  * @see BroadcastReceiver#onReceive(Context, Intent)
  * @see TelephonyManager#ACTION_PHONE_STATE_CHANGED
  */

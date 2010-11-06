@@ -6,15 +6,13 @@ import android.content.SharedPreferences.Editor;
 import android.media.AudioManager;
 
 /**
- * VolumeControl
- * 
- * For saving, maximizing and restoring the phone's ringer volume.
+ * Methods for saving, maximizing and restoring the phone's ringer volume.
  * 
  * @author Jon Kivinen <android@jkiv.ca>
  */
 public class VolumeControl
 {
-	private static final String VOLUME_FILE = "RingLoudContacts";
+	private static final String VOLUME_FILE = "RingLoudContacts_Volume";
 	private static final String VOLUME_MODE_PREF = "VolumeMode";
 	private static final String VOLUME_LEVEL_PREF = "VolumeLevel";
 	
