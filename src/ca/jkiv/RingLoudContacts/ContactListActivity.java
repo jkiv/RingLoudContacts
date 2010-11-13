@@ -37,9 +37,8 @@ import android.widget.Toast;
 public class ContactListActivity extends ListActivity
 {
     private static final String LOG_TAG = "ContactListActivity";
-    List<PhoneNumber> listData;
-    
     private static final int CHOOSE_CONTACT_RESULT = 1001;
+    private List<PhoneNumber> listData;
     
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -264,99 +263,99 @@ public class ContactListActivity extends ListActivity
     /**
      * Called when an activity returns with a result.
      */
-	protected void onActivityResult(int requestCode, int resultCode, Intent data)
-	{
-		if (resultCode == RESULT_OK)
-		{
-			switch (requestCode)
-			{
-			  // Contact-choosing Activity returned result
-			  case CHOOSE_CONTACT_RESULT:
-				Cursor cursor = null;
-				String phoneNumber = "";
-				
-				try
-				{
-					Uri result = data.getData();
-					
-					// get the contact id from the Uri
-					String id = result.getLastPathSegment();
-					
-					// query for everything email
-					cursor = getContentResolver().query(Phone.CONTENT_URI, null, Phone.CONTACT_ID + "=?", new String[] { id }, null);
-					
-					int phoneIdx = cursor.getColumnIndex(Phone.DATA);
-					
-					// let's just get the first email
-					if (cursor.moveToFirst())
-					{						
-						if (cursor.getCount() > 1)
-						{
-							LinkedList<CharSequence> numbers = new LinkedList<CharSequence>();
-							
-							// Add all the numbers
-							do
-							{
-								numbers.addLast(cursor.getString(phoneIdx));
-							} while(cursor.moveToNext());
-							
-							// Ask the user to select one of the numbers
-							AlertDialog.Builder builder = new AlertDialog.Builder(this);
-							builder.setTitle(R.string.ContactList_WhichNumberTitleText)
-								   .setSingleChoiceItems(numbers.toArray(new CharSequence[0]), 0, null)
-								   .setPositiveButton("OK", new DialogInterface.OnClickListener()
-								   {
-									    // User clicked "OK" 
-					                    public void onClick(DialogInterface dialog, int whichButton)
-					                    {
-					                    	// Get the item
-					                    	ListView listView = ((AlertDialog) dialog).getListView();
-					                    	int selectedItem = listView.getCheckedItemPosition();
-					                    	
-					                    	// Add the item to the list
-					                    	if (selectedItem != ListView.INVALID_POSITION)
-					                    	{
-					                    		String selectedPhoneNumber = (String) listView.getItemAtPosition(selectedItem);
-						                    	addNumber(selectedPhoneNumber);
-					                    	}
-					                    }
-								   }).create();
-							
-							builder.show();
-						}
-						else
-						{
-							// One phone number for contact, add it.
-							phoneNumber = cursor.getString(phoneIdx);
-							addNumber(phoneNumber);
-						}
-					}
-					else
-					{
-						// No phone number for contact
-						Toast.makeText(this, R.string.ContactList_EmptyToastText, Toast.LENGTH_LONG).show();
-					}
-				}
-				catch (Exception e)
-				{
-					Log.e(LOG_TAG, "Failed to get contact data.", e);
-				}
-				finally
-				{
-					if (cursor != null)
-					{
-						cursor.close();
-					}
-				}
-				
-				break;
-			}
-		}
-		else
-		{
-			Log.e(LOG_TAG, "Contact-choosing activity not OK.");
-		}
-	}
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+    	if (resultCode == RESULT_OK)
+    	{
+    		switch (requestCode)
+    		{
+    		// Contact-choosing Activity returned result
+    		case CHOOSE_CONTACT_RESULT:
+    			Cursor cursor = null;
+    			String phoneNumber = "";
+
+    			try
+    			{
+    				Uri result = data.getData();
+
+    				// get the contact id from the Uri
+    				String id = result.getLastPathSegment();
+
+    				// query for everything email
+    				cursor = getContentResolver().query(Phone.CONTENT_URI, null, Phone.CONTACT_ID + "=?", new String[] { id }, null);
+
+    				int phoneIdx = cursor.getColumnIndex(Phone.DATA);
+
+    				// let's just get the first email
+    				if (cursor.moveToFirst())
+    				{						
+    					if (cursor.getCount() > 1)
+    					{
+    						LinkedList<CharSequence> numbers = new LinkedList<CharSequence>();
+
+    						// Add all the numbers
+    						do
+    						{
+    							numbers.addLast(cursor.getString(phoneIdx));
+    						} while(cursor.moveToNext());
+
+    						// Ask the user to select one of the numbers
+    						AlertDialog.Builder builder = new AlertDialog.Builder(this);
+    						builder.setTitle(R.string.ContactList_WhichNumberTitleText)
+    						.setSingleChoiceItems(numbers.toArray(new CharSequence[0]), 0, null)
+    						.setPositiveButton("OK", new DialogInterface.OnClickListener()
+    						{
+    							// User clicked "OK" 
+    							public void onClick(DialogInterface dialog, int whichButton)
+    							{
+    								// Get the item
+    								ListView listView = ((AlertDialog) dialog).getListView();
+    								int selectedItem = listView.getCheckedItemPosition();
+
+    								// Add the item to the list
+    								if (selectedItem != ListView.INVALID_POSITION)
+    								{
+    									String selectedPhoneNumber = (String) listView.getItemAtPosition(selectedItem);
+    									addNumber(selectedPhoneNumber);
+    								}
+    							}
+    						}).create();
+
+    						builder.show();
+    					}
+    					else
+    					{
+    						// One phone number for contact, add it.
+    						phoneNumber = cursor.getString(phoneIdx);
+    						addNumber(phoneNumber);
+    					}
+    				}
+    				else
+    				{
+    					// No phone number for contact
+    					Toast.makeText(this, R.string.ContactList_EmptyToastText, Toast.LENGTH_LONG).show();
+    				}
+    			}
+    			catch (Exception e)
+    			{
+    				Log.e(LOG_TAG, "Failed to get contact data.", e);
+    			}
+    			finally
+    			{
+    				if (cursor != null)
+    				{
+    					cursor.close();
+    				}
+    			}
+
+    			break;
+    		}
+    	}
+    	else
+    	{
+    		Log.e(LOG_TAG, "Contact-choosing activity not OK.");
+    	}
+    }
     
 	/**
 	 * Given a phone number, try to add it to the list.
