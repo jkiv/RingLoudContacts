@@ -40,10 +40,8 @@
 	<string name="Settings_TypesCategoryTitle">Options</string>
 	<string name="Settings_AdjustRingerVolumeTitle">Adjust ringer volume</string>
 	<string name="Settings_AdjustRingerVolumeSummary">Adjust the volume when the phone is ringing.</string>
-	<string name="Settings_AboutCategoryTitle"></string>
-	<string name="Settings_AboutTitle">About</string>
-	<string name="Settings_AboutSummary"></string>
+	<string name="Settings_AboutCategoryTitle">About</string>
 	
-	<string name="About_Title">About</string>
-	<string name="About_Message">Ring Loud Contacts\n\nNOTE: This app may require caller-ID.\n\nThis is an Android app that maximizes your ring volume when certain numbers are calling.  These numbers are specified by the user.  The user can add one of their contacts or specify a number manually.\n\nhttp://jkiv.ca/android/\n\nSource available: http://github.com/jkiv/RingLoudContacts/\n\n</string>
+	<string name="AboutDialog_TitleText">About</string>	
+	<string name="AboutDialog_MessageText"><b>Note: This app requires caller-ID.</b>\n\nThis is an Android app that maximizes your ring volume when certain numbers are calling.  These numbers are specified by the user.  The user can add one of their contacts or specify a number manually.\n\nhttp://jkiv.ca/android\n\nSource available:\nhttp://github.com/jkiv/RingLoudContacts</string>
 </resources>

@@ -16,8 +16,8 @@
 	</PreferenceCategory>
 	
 	<PreferenceCategory android:title="@string/Settings_AboutCategoryTitle">
-		<Preference android:title="@string/Settings_AboutTitle"
-                    android:summary="@string/Settings_AboutSummary"
+		<Preference android:title="@string/app_name"
+                    android:summary=""
                     android:key="_AboutLink" />
 	</PreferenceCategory>
 </PreferenceScreen>
