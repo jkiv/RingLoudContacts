@@ -10,26 +10,26 @@ import android.widget.EditText;
  */
 class EditTextDialogWrapper
 {
-	EditText editText = null;
-	View parentView = null;
-	
-	public EditTextDialogWrapper(View parentView)
-	{
-		this.parentView = parentView;
-		
-		if (parentView != null)
-		{
-			this.editText = (EditText) parentView.findViewById(R.id.EditTextDialog_EditText);
-		}
-	}
-	
-	public String getText()
-	{
-		if (this.editText != null)
-		{
-			return editText.getText().toString();
-		}
-		
-		return "";
-	}
+    EditText editText = null;
+    View parentView = null;
+    
+    public EditTextDialogWrapper(View parentView)
+    {
+        this.parentView = parentView;
+        
+        if (parentView != null)
+        {
+            this.editText = (EditText) parentView.findViewById(R.id.EditTextDialog_EditText);
+        }
+    }
+    
+    public String getText()
+    {
+        if (this.editText != null)
+        {
+            return editText.getText().toString();
+        }
+        
+        return "";
+    }
 }

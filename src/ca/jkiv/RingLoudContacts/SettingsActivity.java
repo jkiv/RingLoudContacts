@@ -25,7 +25,7 @@ public class SettingsActivity extends PreferenceActivity
 {
     private PreferenceManager preferenceManager;
 
-	public void onCreate(Bundle savedInstanceState)
+    public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         
@@ -44,12 +44,12 @@ public class SettingsActivity extends PreferenceActivity
         
         try
         {
-     	   PackageInfo packageInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
-     	   aboutItem.setSummary("Version " + packageInfo.versionName);
+            PackageInfo packageInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
+            aboutItem.setSummary("Version " + packageInfo.versionName);
         } 
         catch (NameNotFoundException e)
         {
-     	   aboutItem.setSummary("Version ???");
+            aboutItem.setSummary("Version ???");
         }
         
         // When we click the "About" item, we want to display an about dialog.
@@ -57,23 +57,23 @@ public class SettingsActivity extends PreferenceActivity
         {
             public boolean onPreferenceClick(Preference preference)
             {
-            	// Create about dialog
-            	LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        		View layout = inflater.inflate(R.layout.about_dialog, null);
-        		TextView aboutTextView = (TextView) layout.findViewById(R.id.AboutDialog_TextView);
-        		
-            	final SpannableString s = new SpannableString(getText(R.string.AboutDialog_Message));
-        		Linkify.addLinks(s, Linkify.WEB_URLS);
-        		aboutTextView.setText(s);
-        		aboutTextView.setMovementMethod(LinkMovementMethod.getInstance());
+                // Create about dialog
+                LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                View layout = inflater.inflate(R.layout.about_dialog, null);
+                TextView aboutTextView = (TextView) layout.findViewById(R.id.AboutDialog_TextView);
+                
+                final SpannableString s = new SpannableString(getText(R.string.AboutDialog_Message));
+                Linkify.addLinks(s, Linkify.WEB_URLS);
+                aboutTextView.setText(s);
+                aboutTextView.setMovementMethod(LinkMovementMethod.getInstance());
 
-        		new AlertDialog.Builder(SettingsActivity.this)
-        		    .setTitle(R.string.AboutDialog_Title)
-        		    .setIcon(R.drawable.ic_launcher_ring_loud_contacts)
-        		    .setPositiveButton(R.string.Dialog_OK, null)
-        		    .setView(layout)
-        		    .show();
-            	
+                new AlertDialog.Builder(SettingsActivity.this)
+                    .setTitle(R.string.AboutDialog_Title)
+                    .setIcon(R.drawable.ic_launcher_ring_loud_contacts)
+                    .setPositiveButton(R.string.Dialog_OK, null)
+                    .setView(layout)
+                    .show();
+
                 return true;
             }
         });

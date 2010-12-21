@@ -25,49 +25,49 @@ import android.telephony.TelephonyManager;
  */
 public class OnPhoneStateChangeReceiver extends BroadcastReceiver
 {
-	@Override
-	public void onReceive(Context context, Intent intent)
-	{
-		// Check adjust ringer volume setting
-		if (!SettingsPersistence.shouldAdjustVolume(context)) return;
-		
-		// Ignore bogus intents
-		if (intent == null || intent.getAction() == null) return;
-		
-		// Handle android.telephony.TelephonyManager.ACTION_PHONE_STATE
-		if (intent.getAction().equals(android.telephony.TelephonyManager.ACTION_PHONE_STATE_CHANGED))
-		{
-			handleCallStateChanged(context, intent);
-		}
-	}
-	
-	private void handleCallStateChanged(Context context, Intent intent)
-	{
-		TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-		
-		switch(telephonyManager.getCallState())
-		{
-		  case TelephonyManager.CALL_STATE_IDLE:
-			// Phone stopped ringing
-			VolumeControl.resumeVolume(context);
-			break;
-		  case TelephonyManager.CALL_STATE_RINGING:
-			// Phone is ringing
-			String incomingNumber = intent.getExtras().getString(TelephonyManager.EXTRA_INCOMING_NUMBER);
-			List<PhoneNumber> contacts = ContactsListPersistence.getContactList(context);
-			
-			if (contacts.contains(new PhoneNumber(incomingNumber)))
-			{
-				VolumeControl.saveVolume(context);
-				VolumeControl.maxVolume(context);
-			}
-			
-			break;
-		  case TelephonyManager.CALL_STATE_OFFHOOK:
-			// Phone answered or dialing?
-			break;
-		  default:
-			// Something else we're not concerned with
-		}
-	}
+    @Override
+    public void onReceive(Context context, Intent intent)
+    {
+        // Check adjust ringer volume setting
+        if (!SettingsPersistence.shouldAdjustVolume(context)) return;
+        
+        // Ignore bogus intents
+        if (intent == null || intent.getAction() == null) return;
+        
+        // Handle android.telephony.TelephonyManager.ACTION_PHONE_STATE
+        if (intent.getAction().equals(android.telephony.TelephonyManager.ACTION_PHONE_STATE_CHANGED))
+        {
+            handleCallStateChanged(context, intent);
+        }
+    }
+    
+    private void handleCallStateChanged(Context context, Intent intent)
+    {
+        TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+        
+        switch(telephonyManager.getCallState())
+        {
+          case TelephonyManager.CALL_STATE_IDLE:
+            // Phone stopped ringing
+            VolumeControl.resumeVolume(context);
+            break;
+          case TelephonyManager.CALL_STATE_RINGING:
+            // Phone is ringing
+            String incomingNumber = intent.getExtras().getString(TelephonyManager.EXTRA_INCOMING_NUMBER);
+            List<PhoneNumber> contacts = ContactsListPersistence.getContactList(context);
+            
+            if (contacts.contains(new PhoneNumber(incomingNumber)))
+            {
+                VolumeControl.saveVolume(context);
+                VolumeControl.maxVolume(context);
+            }
+            
+            break;
+          case TelephonyManager.CALL_STATE_OFFHOOK:
+            // Phone answered or dialing?
+            break;
+          default:
+            // Something else we're not concerned with
+        }
+    }
 }
