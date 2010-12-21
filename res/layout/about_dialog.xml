@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout for an "about" dialog. 
+
+    Package: ca.jkiv.RingLoudContacts
+    Author: Jon Kivinen <android@jkiv.ca>
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/AboutDialog_ScrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+	                
+	<LinearLayout android:id="@+id/AboutDialog_Layout"
+	              android:orientation="horizontal"
+	              android:layout_width="fill_parent"
+	              android:layout_height="fill_parent"
+	              android:padding="10dp">
+	              
+	    <TextView android:id="@+id/AboutDialog_TextView"
+	              android:layout_width="wrap_content"
+	              android:layout_height="fill_parent"
+	              android:textColor="#FFF" 
+	              android:textSize="16dip"/>
+	</LinearLayout>
+
+</ScrollView>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Layout elements for EditTextDialog. 
+    Layout elements for an EditText dialog.
 
     Package: ca.jkiv.RingLoudContacts
     Author: Jon Kivinen <android@jkiv.ca>

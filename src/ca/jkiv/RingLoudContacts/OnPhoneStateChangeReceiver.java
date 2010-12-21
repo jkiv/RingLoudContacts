@@ -54,7 +54,7 @@ public class OnPhoneStateChangeReceiver extends BroadcastReceiver
 		  case TelephonyManager.CALL_STATE_RINGING:
 			// Phone is ringing
 			String incomingNumber = intent.getExtras().getString(TelephonyManager.EXTRA_INCOMING_NUMBER);
-			List<PhoneNumber> contacts = ContactListPersistence.getContactList(context);
+			List<PhoneNumber> contacts = ContactsListPersistence.getContactList(context);
 			
 			if (contacts.contains(new PhoneNumber(incomingNumber)))
 			{

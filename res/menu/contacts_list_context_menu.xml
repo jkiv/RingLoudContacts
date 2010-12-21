@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Context menu for ContactsListActivity 
+
+    Package: ca.jkiv.RingLoudContacts
+    Author: Jon Kivinen <android@jkiv.ca>
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:id="@+id/ContactsList_ContextMenu_Edit"
+              android:title="@string/ContactsList_ContextMenu_Edit"
+              android:titleCondensed="@string/ContactsList_ContextMenu_EditCondensed"
+              android:visible="true"
+              android:enabled="true" />
+
+        <item android:id="@+id/ContactsList_ContextMenu_Delete"
+              android:title="@string/ContactsList_ContextMenu_Delete"
+              android:titleCondensed="@string/ContactsList_ContextMenu_DeleteCondensed"
+              android:visible="true"
+              android:enabled="true" />
+</menu>

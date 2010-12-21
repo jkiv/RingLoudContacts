@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Custom list layout for ContactsListActivity. 
+
+    Package: ca.jkiv.RingLoudContacts
+    Author: Jon Kivinen <android@jkiv.ca>
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:padding="6dip">
+
+    <ImageView
+        android:id="@+id/ContactsList_ListItem_Photo"
+
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="12dip" />
+
+    <TextView
+    	android:id="@+id/ContactsList_ListItem_Name"
+		
+		android:ellipsize="marquee"
+		
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_toRightOf="@id/ContactsList_ListItem_Photo"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignWithParentIfMissing="true"
+
+		android:textSize="24dip"
+		android:textColor="#ffffff" />
+        
+    <TextView
+        android:id="@+id/ContactsList_ListItem_Number"
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+
+		android:textSize="14dip"
+
+        android:layout_toRightOf="@id/ContactsList_ListItem_Photo"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/ContactsList_ListItem_Name"
+
+        android:singleLine="true" />
+</RelativeLayout>

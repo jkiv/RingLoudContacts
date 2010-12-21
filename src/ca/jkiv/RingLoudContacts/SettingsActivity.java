@@ -59,18 +59,18 @@ public class SettingsActivity extends PreferenceActivity
             {
             	// Create about dialog
             	LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        		View layout = inflater.inflate(R.layout.aboutdialog, null);
+        		View layout = inflater.inflate(R.layout.about_dialog, null);
         		TextView aboutTextView = (TextView) layout.findViewById(R.id.AboutDialog_TextView);
         		
-            	final SpannableString s = new SpannableString(getText(R.string.AboutDialog_MessageText));
+            	final SpannableString s = new SpannableString(getText(R.string.AboutDialog_Message));
         		Linkify.addLinks(s, Linkify.WEB_URLS);
         		aboutTextView.setText(s);
         		aboutTextView.setMovementMethod(LinkMovementMethod.getInstance());
 
         		new AlertDialog.Builder(SettingsActivity.this)
-        		    .setTitle(R.string.AboutDialog_TitleText)
+        		    .setTitle(R.string.AboutDialog_Title)
         		    .setIcon(R.drawable.ic_launcher_ring_loud_contacts)
-        		    .setPositiveButton(R.string.Dialog_OKText, null)
+        		    .setPositiveButton(R.string.Dialog_OK, null)
         		    .setView(layout)
         		    .show();
             	

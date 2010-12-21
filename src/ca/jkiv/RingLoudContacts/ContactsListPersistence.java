@@ -8,11 +8,11 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 
 /**
- * Methods for saving contact list to phone to remember.
+ * Methods for saving/loading the contacts list.
  * 
  * @author Jon Kivinen <android@jkiv.ca>
  */
-public class ContactListPersistence
+public class ContactsListPersistence
 {
 	private static final String CONTACT_LIST_FILE = "RingLoudContacts_Contacts";
 	private static final String CONTACT_LIST_PREF = "";
@@ -20,7 +20,7 @@ public class ContactListPersistence
 	private static final String LIST_SEPARATOR = "|";
 	private static final String LIST_SEPARATOR_EXPR = "\\|";
 	
-	private ContactListPersistence() {} // Class not meant to be instantiated
+	private ContactsListPersistence() {} // Class not meant to be instantiated
 
 	/**
 	 * Save list of phone numbers as contact list.

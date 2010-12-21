@@ -7,34 +7,47 @@
 -->
 <resources>
     <string name="app_name">Ring Loud Contacts</string>
-	<string name="ContactListMenu_AddContactText">Add Contact</string>
-	<string name="ContactListMenu_AddContactCondensedText">Add Contact</string>
-	<string name="ContactListMenu_AddText">Add Number</string>
-	<string name="ContactListMenu_AddCondensedText">Add Number</string>
-	<string name="ContactListMenu_ClearText">Clear All</string>
-	<string name="ContactListMenu_ClearCondensedText">Clear</string>
-	<string name="ContactListMenu_SettingsText">Settings</string>
-	<string name="ContactListMenu_SettingsCondensedText">Settings</string>
+	<string name="ContactsList_Menu_AddContact">Add Contact</string>
+	<string name="ContactsList_Menu_AddContactCondensed">Add Contact</string>
+	<string name="ContactsList_Menu_Add">Add Number</string>
+	<string name="ContactsList_Menu_AddCondensed">Add Number</string>
+	<string name="ContactsList_Menu_Clear">Clear All</string>
+	<string name="ContactsList_Menu_ClearCondensed">Clear</string>
+	<string name="ContactsList_Menu_Settings">Settings</string>
+	<string name="ContactsList_Menu_SettingsCondensed">Settings</string>
 	
-	<string name="ContactListContextMenu_TitleText">Phone number</string>
-	<string name="ContactListContextMenu_EditText">Edit number</string>
-	<string name="ContactListContextMenu_EditCondensedText">Edit</string>
-	<string name="ContactListContextMenu_DeleteText">Remove number</string>
-	<string name="ContactListContextMenu_DeleteCondensedText">Remove</string>
+	<string name="ContactsList_ContextMenu_Title">Phone number</string>
+	<string name="ContactsList_ContextMenu_Edit">Edit number</string>
+	<string name="ContactsList_ContextMenu_EditCondensed">Edit</string>
+	<string name="ContactsList_ContextMenu_Delete">Remove number</string>
+	<string name="ContactsList_ContextMenu_DeleteCondensed">Remove</string>
 	
-	<string name="ContactList_EmptyToastText">No numbers in your list.</string>
-	<string name="ContactList_RemovedNumberToastText">Removed number.</string>
-	<string name="ContactList_AddNumberTitleText">Add phone number</string>
-	<string name="ContactList_EditNumberTitleText">Edit phone number</string>
-	<string name="ContactList_WhichNumberTitleText">Which number?</string>
-	<string name="ContactList_NumberExistsToastText">Number already exists in list.</string>
-	<string name="ContactList_AreYouSureText">Are you sure you want to clear your list?</string>
-	<string name="ContactList_AreYouSureTitleText">Are you sure?</string>
+	<string name="ContactsList_Empty">No numbers in your list.</string>
+	<string name="ContactsList_RemovedNumber">Removed number.</string>
+	<string name="ContactsList_AddNumberTitle">Add phone number</string>
+	<string name="ContactsList_EditNumberTitle">Edit phone number</string>
+	<string name="ContactsList_WhichNumberTitle">Which number?</string>
+	<string name="ContactsList_NumberExists">Number already exists in list.</string>
+	<string name="ContactsList_AreYouSure">Are you sure you want to clear your list?</string>
+	<string name="ContactsList_AreYouSureTitle">Are you sure?</string>
 	
-	<string name="Dialog_OKText">OK</string>
-	<string name="Dialog_CancelText">Cancel</string>
-	<string name="Dialog_YesText">Yes</string>
-	<string name="Dialog_NoText">No</string>
+	<string name="ContactsList_AddedNumber">Added phone number:</string>
+    <string name="ContactsList_NumberRemoved">Removed number.</string>
+    <string name="ContactsList_NoNumberFound">No number available for selected contact.</string>
+    <string name="ContactsList_NumberAlreadyInList">Phone number already in list.</string>
+    <string name="ContactsList_PrimaryContactSet">Set primary contact.</string>
+    <string name="ContactsList_PrimaryContactUnset">Unset primary contact.</string>
+    
+    <string name="ContactsList_SelectNumberTitle">Which number?</string>
+    
+    <string name="ContactsList_EmptyList">Your list of contacts is currently empty.</string>
+    <string name="ContactsList_CouldNotGetContactData">Error retrieving contact information.</string>
+    <string name="ContactsList_UnknownContact">Unknown contact</string>
+	
+	<string name="Dialog_OK">OK</string>
+	<string name="Dialog_Cancel">Cancel</string>
+	<string name="Dialog_Yes">Yes</string>
+	<string name="Dialog_No">No</string>
 	
 	<string name="Settings_Title">Ring Loud Contacts > Settings</string>
 	<string name="Settings_TypesCategoryTitle">Options</string>
@@ -42,6 +55,6 @@
 	<string name="Settings_AdjustRingerVolumeSummary">Adjust the volume when the phone is ringing.</string>
 	<string name="Settings_AboutCategoryTitle">About</string>
 	
-	<string name="AboutDialog_TitleText">About</string>	
-	<string name="AboutDialog_MessageText"><b>Note: This app requires caller-ID.</b>\n\nThis is an Android app that maximizes your ring volume when certain numbers are calling.  These numbers are specified by the user.  The user can add one of their contacts or specify a number manually.\n\nhttp://jkiv.ca/android\n\nSource available:\nhttp://github.com/jkiv/RingLoudContacts</string>
+	<string name="AboutDialog_Title">About</string>	
+	<string name="AboutDialog_Message"><b>Note: This app requires caller-ID.</b>\n\nThis is an Android app that maximizes the phone\'s volume when certain numbers are calling.  These numbers are specified by the user.  The user can add one of their contacts or specify a number manually.\n\nhttp://jkiv.ca/android\n\nSource available:\nhttp://github.com/jkiv/RingLoudContacts</string>
 </resources>

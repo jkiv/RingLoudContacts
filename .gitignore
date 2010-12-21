@@ -4,3 +4,4 @@ gen/*
 .classpath
 .project
 *.apk
+.DS_Store
