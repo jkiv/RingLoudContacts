@@ -1,6 +1,6 @@
 ## ca.jkiv.RingLoudContacts
 
-![Project status: updates scheduled](https://img.shields.io/badge/project status-updates_scheduled-yellow.svg)
+![Project status: will revisit soon](https://img.shields.io/badge/project status-will revisit soon-yellow.svg)
 
 #### Note: this app may require caller-ID.
 
