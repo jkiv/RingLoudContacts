@@ -1,9 +1,8 @@
 ## ca.jkiv.RingLoudContacts
 
-![Project status: active](https://img.shields.io/badge/project status-active-brightgreen.svg)
+![Project status: abandoned](https://img.shields.io/badge/project status-abandoned-red.svg)
 
 [![TODO](https://img.shields.io/github/issues/jkiv/ringloudcontacts.svg)](https://github.com/jkiv/RingLoudContacts/issues)
-
 
 #### Note: this app may require caller-ID.
 
